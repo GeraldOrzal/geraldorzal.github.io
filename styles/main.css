@@ -137,13 +137,14 @@ q{
     letter-spacing: .15em;
     
 }
-.card{
-    transition: transform 2s cubic-bezier(.155,1.105,.295,1.12);
-}
 .card:hover{
     transform: scale(1.2);
     z-index: 1;
 }
+.card{
+    transition: transform 2s cubic-bezier(.155,1.105,.295,1.12);
+}
+
 .animate{
     animation: 
     typing 3.5s steps(40, end),
@@ -174,9 +175,18 @@ q{
         height: 80vh;
    }
     #bfbg{
-        background-image: url(/1857604-middle-removebg-preview.png);
-        background-repeat: no-repeat;
+        
         background-position: 20% 120%;
+    }
+    
+}
+@media screen and (max-width:400px) {
+    .midbg{
+        top: 20%;
+    }
+    .card:hover{
+        transform: scale(.9);
+        
     }
 }
 @media only screen and (min-width: 734px) and (max-width:1000px){

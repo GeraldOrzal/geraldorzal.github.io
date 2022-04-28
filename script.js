@@ -50,18 +50,33 @@ $(window).scroll(function() {
         console.log("SCROLLING",$(window).scrollTop()+ $(window).height(),$(document).height())
         bg[0].style.opacity = "0";
         quote.classList.remove("animate");
-        if($(window).scrollTop()+ $(window).height()>=1400){
-            bg1[0].style.opacity = "1";
-            bg3.style.backgroundImage = "none"
-            
-            
-            
+        if($(document).width() >= 1000){
+
+            if($(window).scrollTop()+ $(window).height()>=1400){
+                bg1[0].style.opacity = "1";
+                bg3.style.backgroundImage = "none"
+                
+                
+                
+            }else{
+                
+                
+                bg1[0].style.opacity = "0";    
+            }
         }else{
-            
-            
-            bg1[0].style.opacity = "0";    
+            if($(window).scrollTop()+ $(window).height()>=1100){
+                bg1[0].style.opacity = "1";
+                bg3.style.backgroundImage = "none"
+                
+                
+                
+            }else{
+                
+                
+                bg1[0].style.opacity = "0";    
+            }
         }
-        if($(window).scrollTop()+ $(window).height() == $(document).height()){
+        if($(window).scrollTop()+ $(window).height() >= $(document).height()-100){
             bg[0].style.opacity = "1";
             quote.classList.add("animate");
             console.log("reached end")
