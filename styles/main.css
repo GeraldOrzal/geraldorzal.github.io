@@ -1,0 +1,134 @@
+:root{
+    
+    --bs-body-color: #37AA9C;
+    --bs-gradient: linear-gradient(90deg, rgba(136, 135, 135, 0.15), rgba(23,23,23, 0));
+}
+#bfbg{
+    background-image: url(/1857604-middle-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+    
+}
+.card{
+    position: relative;
+    background-color: #333f44c9;
+    
+}
+.card-text{
+    color: white;
+    text-align: justify;
+}
+/* .block{
+    height: 50vh;
+    position: relative;
+} */
+.lblock{
+    
+    background-color: #A3F7BF;
+}
+.lblock h1{
+    color:#1A1A1B ;
+}
+.list-group{
+    color: white;
+    list-style: none;
+}
+.text{
+    margin-top: 20%;
+}
+.fblock img{
+    
+    transform: rotateZ(-20deg);
+}
+.tblock{
+    position: relative;
+    padding-top: 10em;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s ease-out;
+}
+.sblock{
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(0, 0.91, 0.55, 1.17);
+    height: 80vh;
+}
+.tblock i{
+    color: #37AA9C;
+}
+.lblock a{
+    text-decoration: none;
+    color: #1A1A1B;
+}
+.rblock{
+    position: relative;
+}
+.rblock img{
+    /* position: absolute; */
+    width: 30em;
+    transition: transform .7s ease-in-out;
+}
+.rblock img:hover{
+    transform: rotate(360deg);
+}
+
+q{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em;
+    
+}
+.animate{
+    animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 734px) {
+   q{
+       display: none;
+   }
+   .sblock{
+        height: 80vh;
+   }
+    #bfbg{
+        background-image: url(/1857604-middle-removebg-preview.png);
+        background-repeat: no-repeat;
+        background-position: 20% 120%;
+    }
+}
+@media only screen and (min-width: 734px) and (max-width:1000px){
+    q{
+        top: 30%;
+        left: 0%;
+    }
+    
+ }
