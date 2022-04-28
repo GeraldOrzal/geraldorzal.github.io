@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,200&display=swap');
+
 :root{
     
     --bs-body-color: #37AA9C;
     --bs-gradient: linear-gradient(90deg, rgba(136, 135, 135, 0.15), rgba(23,23,23, 0));
-    
+
 }
 #bfbg{
     background-image: url(/1857604-middle-removebg-preview.png);
@@ -18,10 +20,15 @@
 .card{
     position: relative;
     background-color: #333f44c9;
+    font-family: 'Montserrat', sans-serif;
     
+}
+.card h5{
+    font-weight: 900;
 }
 .card-text{
     color: white;
+    font-weight: 400;
     text-align: justify;
 }
 /* .block{
@@ -40,6 +47,9 @@
     list-style: none;
 }
 .text{
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+
     margin-top: 20%;
 }
 .fblock img{
@@ -128,8 +138,9 @@ q{
     top: 30%;
     left: 30%;
     font-size: 1.3rem;
-    font-weight: bold;
-
+    font-weight: 200;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif;
     overflow: hidden; 
     border-right: .15em solid orange; 
     white-space: nowrap; 
