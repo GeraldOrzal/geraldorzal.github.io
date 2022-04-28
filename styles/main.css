@@ -55,7 +55,7 @@
 .sblock{
     opacity: 0;
     transition: opacity 2s cubic-bezier(0, 0.91, 0.55, 1.17);
-    height: 80vh;
+    
 }
 .tblock i{
     color: #37AA9C;
