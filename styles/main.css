@@ -2,6 +2,7 @@
     
     --bs-body-color: #37AA9C;
     --bs-gradient: linear-gradient(90deg, rgba(136, 135, 135, 0.15), rgba(23,23,23, 0));
+    
 }
 #bfbg{
     background-image: url(/1857604-middle-removebg-preview.png);
@@ -45,7 +46,53 @@
     
     transform: rotateZ(-20deg);
 }
+.det{
+    margin-top: 20%;
+    position: relative;
+}
+.midbg{
+    
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    
+    position: absolute;
+    height: 100%;
+    top: 70%;
+    z-index: -1;
+    transform: translateX(-100%);
+    
+}
+.midbg1{
+    background-image: url('/school.png');
+}
+.midbg2{
+    background-image: url('/coder.jpg');
+}
+.midbg3{
+    background-image: url('/basket.jpg');
+}
+.animbg{
+    animation: moveBG 2s ease;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes moveBG {
+    from {
+        transform: translateX(-100%);
+      }
+      to { 
+        transform: translateX(0%);
+      }
+}
+.bg2{
+    background-image: url('/andy-hu-B85A8-GHjoI-unsplash.jpg');
+}
+.bg3{
+    background-image: url('/juanjo-jaramillo-mZnx9429i94-unsplash.jpg');
+}
 .tblock{
+    margin-top: 20%;
     position: relative;
     padding-top: 10em;
     overflow: hidden;
@@ -55,7 +102,7 @@
 .sblock{
     opacity: 0;
     transition: opacity 2s cubic-bezier(0, 0.91, 0.55, 1.17);
-    
+    margin-top: 20%;
 }
 .tblock i{
     color: #37AA9C;
@@ -89,6 +136,13 @@ q{
     margin: 0 auto; 
     letter-spacing: .15em;
     
+}
+.card{
+    transition: transform 2s cubic-bezier(.155,1.105,.295,1.12);
+}
+.card:hover{
+    transform: scale(1.2);
+    z-index: 1;
 }
 .animate{
     animation: 
