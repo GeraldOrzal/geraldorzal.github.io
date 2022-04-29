@@ -63,9 +63,12 @@
     box-shadow: #1A1A1B 10px 10px 5px 2px;
 }
 .det{
+
+    
     margin-top: 20%;
     position: relative;
 }
+
 .midbg{
     
     background-repeat: no-repeat;
@@ -89,7 +92,7 @@
     background-image: url('/basket.jpg');
 }
 .animbg{
-    animation: moveBG 2s ease;
+    animation: moveBG 1s ease;
     animation-fill-mode: forwards;  
 }
 
