@@ -24,8 +24,8 @@
     
 }
 .card h5{
-    color: rgb(199, 199, 4);
-    font-weight: 900;
+    color: rgb(255, 255, 0);
+    font-weight:400;
 }
 .card-text{
     color: white;
@@ -52,6 +52,10 @@
     font-style: italic;
 
     margin-top: 20%;
+}
+.text h1:nth-of-type(1){
+    font-weight: 900;
+    font-style: normal;
 }
 .fblock img{
     
