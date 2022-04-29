@@ -43,7 +43,7 @@ $(window).scroll(function() {
     if($(window).scrollTop() == 0) {
         
         document.getElementById("myNav").style.backgroundColor = "transparent";     
-        document.getElementById("mypic").style.transform = `rotate(-20deg)`  
+        // document.getElementById("mypic").style.transform = `rotate(-20deg)`  
         
 
     }else{
@@ -82,7 +82,7 @@ $(window).scroll(function() {
             console.log("reached end")
         }
         
-        document.getElementById("mypic").style.transform = `rotate(0deg)`  
+        // document.getElementById("mypic").style.transform = `rotate(0deg)`  
         document.getElementById("myNav").style.backgroundColor = "#1a1a1b69"
     }
     
