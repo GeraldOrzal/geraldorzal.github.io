@@ -1,0 +1,112 @@
+<html>
+<header>
+    <link href="./assets/css/styles.css" rel="stylesheet" />
+    <script src="./assets/js/detectHighlightText.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</header>
+
+<body>
+    
+    <ul class="nav">
+        <li><a href="#abtme">About me</a></li>
+        <li><a href="#proj">Projects</a></li>
+        <li><a href="#exp">Experience</a></li>
+        <li><a href="#contme">Skills</a></li>
+        <li id="arrow"><i class="bi bi-arrow-left"></i></li>
+    </ul>
+    <i class="bi bi-list" id="burger"></i>
+    <div class="block" id="abtme">
+        
+        <div class="card ">
+            <h3>🙏🏼Good Team Player</h3>
+            <p>
+              During our capstone project, I always give respect to  everyones ideas especially on the designs, whenever they see something off i immediately address it to the group and when all agreed then i just make the changes.
+            </p>
+        </div>
+        <div class="card active">
+            <h3> 💪🏼 Can Work Under Pressure</h3>
+            <p>
+                As a student, Working under pressure isn't new to me. As activities starts to pile up, I'll give priority to the activity that has the nearest deadline and when there is enough time, i also starts the next activity so that the workload is lessen when i decided to work on it.
+            </p>
+        </div>
+        <div class="card">
+            <h3>Can Handle Multiple Projects</h3>
+            <p>
+                As a programmer lover/addict, I really really loved to code. I consume most of my time in Coding cause i loved when im working on project and it has a bug that need to be fix. The feeling of relief that you will experience when you fix the bug that took you so many tries and failures.
+            </p>
+        </div>
+    </div>
+   
+    <div class="block" id="exp">
+        <h1 class="blocktitle"> 👩🏻‍🚀Experience</h1>
+        <div class="expboard">
+            <ul>
+                <li class="list activeblock">Main Programmer of our Capstone Group.</li>
+                2021
+                <li class="list ">Get hired as a PocketDevs Mobile Developer Intern</li>
+                2022
+            </ul>
+        </div>
+    </div>
+    <div class="semiblock" id="proj">
+        <h1 class="blocktitle">🧑🏻‍🚀Projects</h1>
+        <div class="cont">
+            <div class="item show">
+                <object id="default" type="image/svg+xml" data="./assets/svg/def.svg" style="height: 80%;">
+                </object>
+                <div id="data">
+                    <h1 id="title"></h1>
+                    <img id="image"/>
+                    <div class="desc" id="desc">
+                        
+                        
+                    </div>
+                    <div class="techstack" id="tech">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="item projects" id="projects">
+                
+            </div>
+        </div>
+    </div> 
+    <div class="semiblock" id="contme">
+        <h1 class="blocktitle"> 🧑🏼‍💻Contact Me</h1>
+        <div class="flex">
+            <div class="contact">
+                <div  class="cardinfo">
+                    <h3 style="margin-bottom: 0;">Gerald Orzal</h3>
+                    <h4 style="margin: 0;">Developer 👨🏻‍💻</h4>
+                    <h3>#About me </h3>
+                    <p>Hi! I am Gerald Orzal with Bachelors Degree in Information Technology. Graduated from Polytechnic University of the Philippines Biñan Campus</p>
+                    <div class="contactinfo">
+                        <h5>Email: geraldorzal14@gmail.com</h5>
+                        <h5>Contact number: 09174570106</h5>
+                    </div>
+                </div>
+                <div class="cardimg">
+                </div>
+            </div>
+            <div>
+                <h1 style="color: white;">Skills:</h1>
+                <div class="skills">
+                    <div><img src="./assets/images/icons8-react-100.png" alt="react"/>⭐️ ⭐️ ⭐️ </div>
+                    <div><img src="./assets/images/icons8-flutter-96.png" alt="flutter"/>⭐️⭐️</div>
+                    <div><img src="/assets/images/icons8-laravel-96.png" alt="laravel"/>⭐️⭐️</div>
+                </div>
+                <h1 style="color: white;">Languages:</h1>
+                <div class="skills">
+                    <div><img src="./assets/images/logo.png" alt="c#"/>⭐️ ⭐️ ⭐️</div>
+                    <div><img src="./assets/images/javascript.png" alt="javascript"/>⭐️ ⭐️ ⭐️</div>
+                    <!-- <div><img src="/assets/images/icons8-laravel-96.png" alt="laravel"/>⭐️⭐️</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/projectsData.js"></script>    
+<script src="./assets/js/burgerAnim.js"></script>    
+</html>
