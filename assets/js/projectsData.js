@@ -3,6 +3,7 @@ const projects = [
         title:"Capstone Project",
         desc:"This system is a logistic type of system that handles the monitoring and managing the client drivers.A system consist of two application a web and mobile app. This one is a web app that has these features:",
         list:"<ul><li>Tracking the geolocation of drivers</li><li>Monitor the messages that has been sent by the mobile app</li><li>Creating and Dispatching of schedule to mobile app</li><li>Can be able to send notifications to the mobile app</li></ul>",
+        link:"https://ltsc-website.vercel.app/",
         techstack:[
             "./assets/svg/nextjs.svg",
             "./assets/images/javascript.png",
@@ -30,9 +31,13 @@ const projectElem = document.getElementById("projects");
 const contData = document.getElementById("data");
 projects.forEach((data)=>{
     const img = document.createElement("img");
+    const link = document.createElement("a");
+    link.href = data.link;
     img.src = `./assets/images/${data.img}`;
     img.classList.add("allProjects");
-    projectElem.append(img);
+    link.append(img);
+    link.target = "_target"
+    projectElem.append(link);
     img.addEventListener("mouseover",(elem)=>{
         document.getElementById("default").style.left = "-100%";
         ChangeData(data.title,data.desc,data.techstack,`./assets/images/${data.img}`,data.list);

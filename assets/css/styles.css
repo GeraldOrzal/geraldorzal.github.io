@@ -123,7 +123,7 @@ body{
     gap: 10px;
     padding: 10px;
 }
-.projects > *{
+.allProjects{
     width: 100%;
     padding: 10px;
 }
