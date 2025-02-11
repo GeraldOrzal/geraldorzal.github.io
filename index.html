@@ -1,116 +1,279 @@
-<html>
-<header>
-    <link href="./assets/css/styles.css" rel="stylesheet" />
-    <script src="./assets/js/detectHighlightText.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-</header>
-
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     
-    <ul class="nav">
-        <li><a href="#abtme">About me</a></li>
-        <li><a href="#proj">Projects</a></li>
-        <li><a href="#exp">Experience</a></li>
-        <li><a href="#contme">Skills</a></li>
-        <li id="arrow"><i class="bi bi-arrow-left"></i></li>
-    </ul>
-    <i class="bi bi-list" id="burger"></i>
-    <div class="block" id="abtme">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/@zouloux/shake@1.3.0/shake.min.js
+"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+     <!-- <div class="opener" id="opener" >
+        <label>
+            Please input an emoji that reminds me of <br/> 🫵    
+        </label>
         
-        <div class="card ">
-            <h3>🙏🏼Good Team Player</h3>
-            <p>
-              During our capstone project, I always give respect to  everyones ideas especially on the designs, whenever they see something off i immediately address it to the group and when all agreed then i just make the changes.
-            </p>
-        </div>
-        <div class="card active">
-            <h3> 💪🏼 Can Work Under Pressure</h3>
-            <p>
-                As a student, Working under pressure isn't new to me. As activities starts to pile up, I'll give priority to the activity that has the nearest deadline and when there is enough time, i also starts the next activity so that the workload is lessen when i decided to work on it.
-            </p>
-        </div>
-        <div class="card">
-            <h3>Can Handle Multiple Projects</h3>
-            <p>
-                As a programming lover/addict, I really really loved to code. I consume most of my time in Coding cause i loved when im working on project and it has a bug that need to be fix. The feeling of relief that you will experience when you fix the bug that took you so many tries and failures.
-            </p>
-        </div>
-    </div>
-   
-    <div class="block" id="exp">
-        <h1 class="blocktitle"> 👩🏻‍🚀Experience</h1>
-        <div class="expboard">
-            <ul>
-                <li class="list activeblock">Main Programmer of our Capstone Group.</li>
-                2021
-                <li class="list ">Get hired as a PocketDevs Mobile Developer Intern</li>
-                2022
-            </ul>
-        </div>
-    </div>
-    <div class="semiblock" id="proj">
-        <h1 class="blocktitle">🧑🏻‍🚀Projects</h1>
-        <div class="cont">
-            <div class="item show">
-                <object id="default" type="image/svg+xml" data="./assets/svg/def.svg" style="height: 80%;">
-                </object>
-                <div id="data">
-                    <h1 id="title"></h1>
-                    <img id="image"/>
-                    <div class="desc" id="desc">
-                        
-                        
-                    </div>
-                    <div class="techstack" id="tech">
-                        
-                    </div>
-                </div>
+        <input
+            placeholder="[hit enter]"
+            name="opener"
+            id="openerInput"
+        />
+    </div> -->
+    <div class="main" >
+
+        <div class="opener1 garden" >
+            <div class="lights" style="display: none;">
+                                
             </div>
-            <div class="item projects" id="projects">
+            <div class="f-wrapper--2">
+                    
+                    <div class="flower__line"></div>
+                    
+                    <div class="f">
+                        
+                        <div class="flower__leaf flower__leaf--1">
+                            
+                        </div>
+                        <div class="flower__leaf flower__leaf--2"></div>
+                        <div class="flower__leaf flower__leaf--3"></div>
+                        <div class="flower__leaf flower__leaf--4"></div>
+                        <div class="flower__leaf flower__leaf--5"></div>
+                        <div class="flower__leaf flower__leaf--6"></div>
+                        <div class="flower__leaf flower__leaf--7"></div>
+                    </div>
+                    
+            </div>
+        </div>
+        <div class="grasstop grasstop-1"></div>
+        <div class="grasstop grasstop-2" ></div>
+        <div class="grasstop grasstop-3"></div>
+        <div class="grasstop grasstop-4"></div>
+        <div class="fly fly-1"
+        onclick="clickedFly('.fly-1')"
+        >
+            <div class="head">
+            </div>
+            <div class="body">
+                <div class="wings">
+                </div>
                 
             </div>
         </div>
-    </div> 
-    <div class="semiblock" id="contme">
-        <h1 class="blocktitle"> 🧑🏼‍💻Contact Me</h1>
-        <div class="flex">
-            <div class="contact">
-                <div  class="cardinfo">
-                    <h3 style="margin-bottom: 0;">Gerald Orzal</h3>
-                    <h4 style="margin: 0;">Developer 👨🏻‍💻</h4>
-                    <h3>#About me </h3>
-                    <p>Hi! I am Gerald Orzal with Bachelors Degree in Information Technology. Graduated from Polytechnic University of the Philippines Biñan Campus</p>
-                    <div class="contactinfo">
-                        <h5>Email: geraldorzal14@gmail.com</h5>
-                        <h5>Contact number: 09174570106</h5>
-                    </div>
-                </div>
-                <div class="cardimg">
-                </div>
+        <div class="fly fly-2"
+            onclick="clickedFly('.fly-2')"
+        >
+            <div class="head">
             </div>
-            <div>
-                <h1 style="color: white;">Skills:</h1>
-                <div class="skills">
-                    <div><img src="./assets/images/icons8-react-100.png" alt="react"/>⭐️ ⭐️ ⭐️ </div>
-                    <div><img src="./assets/images/icons8-flutter-96.png" alt="flutter"/>⭐️⭐️</div>
-                    <div><img src="/assets/images/icons8-laravel-96.png" alt="laravel"/>⭐️⭐️</div>
+            <div class="body">
+                <div class="wings">
                 </div>
-                <h1 style="color: white;">Languages:</h1>
-                <div class="skills">
-                    <div><img src="./assets/images/logo.png" alt="c#"/>⭐️ ⭐️ ⭐️</div>
-                    <div><img src="./assets/images/javascript.png" alt="javascript"/>⭐️ ⭐️ ⭐️</div>
-                    <!-- <div><img src="/assets/images/icons8-laravel-96.png" alt="laravel"/>⭐️⭐️</div> -->
-                </div>
-                <div style="color: white;">
-                    This portfolio was made with just pure html,css and javascript.
-                </div>
-
+                
             </div>
         </div>
+        <div class="fly fly-3"
+        onclick="clickedFly('.fly-3')"
+        >
+            <div class="head">
+            </div>
+            <div class="body">
+                <div class="wings">
+                </div>  
+            </div>
+        </div>
+        
+        <div class="fly fly-4"
+            onclick="clickedFly('.fly-4')"
+        >
+            <div class="head">
+            </div>
+            <div class="body">
+                <div class="wings">
+                </div>
+                
+            </div>
+        </div>
+        <div class="entrytitle typewriter">
+            <h1 class="title">Sino nga ba si Joyce? (Tap the flies)</h1>
+        </div>
+    
+        <div class="ground">
+    
+        </div>
+        <div class="star"
+        style="display: none;"
+        >
+            <div class="hori"></div>
+            <div class="veri"></div>
+        </div>
+        <div class="crown" style="display: none;">
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+    
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+    
+    
+    
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+    
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+    
+    
+    
+    
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+    
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            <div class="star5">
+                <div class="hori"></div>
+                <div class="veri"></div>
+            </div>
+            
+    
+        </div>
+     
+    
+        <div class="star1"
+        style="display: none;"
+        >
+            <div class="hori"></div>
+            <div class="veri"></div>
+        </div>
+    
+        <div class="star2"
+        style="display: none;"
+        >
+            <div class="hori"></div>
+            <div class="veri"></div>
+        </div>
+    
+        <div class="star3"
+        style="display: none;"
+        >
+            <div class="hori"></div>
+            <div class="veri"></div>
+        </div>
+    </div>
+
+    <div class="pic pic1" style="display: none;">
+        <img
+            src="./images/pic1.webp"
+        />
+        <div class="typewriter mes1" >
+            <div class="p1" id="effect1" style="white-space: pre-line;">She had a high pitch voice that makes it stand out even in a crowd. Others may hate it but i loved it and if she let me record it, i would loved to hear it everyday.</div>
+            <button onclick="BackToMain('.pic1')">back</button>
+        </div>
+        
+    </div>
+
+    <div class="pic pic2"  style="display: none;">
+        <img
+            src="./images/pic2.webp"
+        />
+        <div class="typewriter mes1" >
+            <div class="p1" id="effect2" style="white-space: pre-line;">She's a smart girl no boy could easily breaks her wall. Lucky for you if she'll let you (*I envy you*)</div>
+            <button onclick="BackToMain('.pic2')">back</button>
+        </div>
+    </div>
+    <div class="pic pic3"   style="display: none;">
+        <img
+            src="./images/pic3.webp"
+        />
+        <div class="typewriter mes1">
+            <div class="p1" id="effect3" style="white-space: pre-line;">"For me she's like an idol (second to Mina HAHAHAHA). She got looks and talent as well, i can't believe she nailed the competition for muses (*YOU MUST BE THE CHAMPION*)."</div>
+            
+            <button onclick="BackToMain('.pic3')">back</button>
+        </div>
+    </div>
+    <div class="pic pic4" style="display: none;">
+        <img
+            src="./images/pic4.webp"
+        />
+        <div class="typewriter mes1">
+            <div class="p1" id="effect4" style="white-space: pre-line;">She got a smile that can brightens my day. I'm so sorry if i make my way to see you because i wanted to witness this firsthand.</div>
+            
+            <button onclick="BackToMain('.pic4')">back</button>
+        </div>
+    </div>
+
+    <div class="message" style="display: none;">
+        <label>
+            Hi Joyce!
+        </label>    
+        <p>
+            Sana umabot ka dito. 
+            Madami kana ba nakuhang flowers at chocolates?
+            Sorry na agad, ito nalang pambawi ko sa panggugulo ko sayo.
+            Last na naman to :'). Sana natuwa ka. Gusto ko sana hintayin ka maging ready
+            kaso yung actions mo yung nagsasabi sakin na wag na. I'll take it as a hint nalang.
+            Sorry talagaaaaa!!!!
+            
+            Happy Valentines Day!!!
+            Hoping na maging successful ka sa life.
+            Hintayin ko nalang mawala tong feelings ko para sayo.
+            Yun lang sana natuwa ka :')
+        </p>
+        <p>
+            Mula sa biggest fan ni bini joyce,
+            <br/>
+            Gerald
+            <br/>
+            Signing out peace.
+            
+        </p>
     </div>
 </body>
-<script src="./assets/js/projectsData.js"></script>    
-<script src="./assets/js/burgerAnim.js"></script>    
 </html>
