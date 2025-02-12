@@ -5,28 +5,12 @@ let interval1;
 let allIsRemove = false;
 let backCounter = 0;
 
-let sentences = [
-    "So you already received the flowers. I hope you like it <3",
-"Ang corny ko may paganto pako pero sayang e lubusin ko na bago mablock HAHAHA",
-"Hi! <br/>Kamusta, sana okay ka habang nakikita mo to kasi pagdi ka okay di ako okay AAAHHH gasgas na HAHAHA</h1>",
-"Sayang gusto ko sana maghintay na maging ready ka kaso ramdam ko na di ako pasok sa standards mo (YAN SADBOI NANAMAN HAHAHAHA NO MORE SAD MOMENTS HAPPY VALENTINES DAY<3)",
-"Gusto lang kita mapunta dun sa taong gusto mo para magiging masaya ka sa buhay mo huhuhu <3</h1>",
-"Unang kita ko sayo boom na agad na yung feeling sabi ko may something tapos nung madalas na kita nakikita AAACK IYAK parang may flashbang na lagi sa paligid UY COD referrence",
-"d",
-"Gusto pakita makilala kaso mukhang lumalayo kana so i'll take it as a hint nalang",
-"Pero crush padin kita! Hintayin ko nalang magfade to :')",
-"rst fade padin to kuya",
-"Para saking crush, play mo to HAHAHAHA (Niloloko kasi nila ako tayo daw naalala nila dito e well ikaw din naman naalala ko dito kasi pumayag ka dun sa pic thankyouuuuuuuuu <3)",
-"nsert palagi",
-"I hope na natuwa ka dito sa present ko :')",
-"From your no.1 fan till day one mo sa JX HAHAHA wow",
-"#BiniJoyce</h1>",
-"BYE ingat always!!!(Unahan ko na sana di mablock)🤞",
-];
+let alreadyTapped = false;
 
 function HeartGenerator(x,y) {
-    
-    var heart = $(`<svg class="heart" style="left:${x * window.innerWidth - 100}px ;top:${y* window.innerHeight - 200}px"
+   
+
+    var heart = $(`<svg class="heart" style="left:${x * window.innerWidth - 100}px ;top:${y* window.innerHeight}px"
 
     xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 800 800"><g fill="#fdcfdf" stroke-width="25" stroke="#fbbedf" id="heart"><path d="M400 200C731.0055871114243 -11.173184429161978 889.3854748672842 469.83241362899366 400 700 -89.38547486728423 469.83241362899366 68.99441288857565 -11.173184429161978 400 200Z" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>`);             
     
@@ -45,9 +29,11 @@ function remover(cb){
             if(!allIsRemove){
                 allIsRemove = true;
                 clearInterval(cb);
+                alreadyTapped = false;
                 hcounter = 0;
                 isRemoverRunning = false;
                 clearInterval(interval1)
+                
             }
             return;
         }
@@ -65,9 +51,8 @@ function spawner(cb){
         if(hcounter > 500){
             
             if($(".heart").length >= 450 && !isRemoverRunning){
-                cb()
                 isRemoverRunning= true;
-                
+                cb();
                 remover(interval0)
             }
             return;
@@ -144,51 +129,53 @@ function animate4() {
 
 function clickedFly(flyClass) {
     
-
-    switch (flyClass) {
-        case ".fly-1":
-            $(flyClass).addClass('fly1Move')       
-            setTimeout(()=>{
-                spawner(()=>{
-                    $('.pic3').css({display:"flex"})
-                    //animate3();
-                })
-             },1500)
-            break;
-        case ".fly-4":
-            $(flyClass).addClass('fly4Move')       
-
-            setTimeout(()=>{
-                spawner(()=>{
-                    $('.pic4').css({display:"flex"})
+    if(!alreadyTapped){
+        alreadyTapped = true;
+        switch (flyClass) {
+            case ".fly-1":
+                $(flyClass).addClass('fly1Move')       
+                setTimeout(()=>{
+                    spawner(()=>{
+                        $('.pic3').css({display:"flex"})
+                        //animate3();
+                    })
+                 },1500)
+                break;
+            case ".fly-4":
+                $(flyClass).addClass('fly4Move')       
+    
+                setTimeout(()=>{
+                    spawner(()=>{
+                        $('.pic4').css({display:"flex"})
+                        
+                        //animate4();
+                    })
+                 },1500)
+                break;
+            case ".fly-2":
+                $(flyClass).addClass('fly2Move')       
+                setTimeout(()=>{
+                    spawner(()=>{
+                        
+                        $('.pic1').css({display:"flex"})
+                        //animate1();
+                    })
+                 },1500)
+                break;
+            case ".fly-3":
+                $(flyClass).addClass('fly3Move')
+                setTimeout(()=>{
                     
-                    //animate4();
-                })
-             },1500)
-            break;
-        case ".fly-2":
-            $(flyClass).addClass('fly2Move')       
-            setTimeout(()=>{
-                spawner(()=>{
-                    
-                    $('.pic1').css({display:"flex"})
-                    //animate1();
-                })
-             },1500)
-            break;
-        case ".fly-3":
-            $(flyClass).addClass('fly3Move')
-            setTimeout(()=>{
-                
-                spawner(()=>{
-                    $('.pic2').css({display:"flex"})
-                    //animate2();
-                    
-                })
-             },1500)
-            break;
-        default:
-            break;
+                    spawner(()=>{
+                        $('.pic2').css({display:"flex"})
+                        //animate2();
+                        
+                    })
+                 },1500)
+                break;
+            default:
+                break;
+        }
     }
      
      
@@ -229,7 +216,7 @@ function BackToMain(params) {
         setTimeout(async ()=>{
             $('.title').text("Shake your phone")
             const myShakeEvent = new Shake({
-                threshold: 15, // optional shake strength threshold
+                threshold: 0.3, // optional shake strength threshold
                 timeout: 1000, // optional, determines the frequency of event generation
                 handler: () => // required, called when shake is detected
                 {
@@ -284,7 +271,7 @@ this.onload = () =>{
     
     $('input').keypress(e=>{
         
-        if(e.code=="Enter" && $('#openerInput').val()=="💓"){
+        if(e.keyCode==13 && $('#openerInput').val()=="💓"){
             $('#opener').hide()
             spawner(()=>{
                 setTimeout(()=>{
