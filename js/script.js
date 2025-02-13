@@ -92,7 +92,7 @@ function SpawnFlower(posX,posY){
 }
 
 let x = 0;
-let text1= "She had a high pitch voice that makes it stand out even in a crowd. Others may hate it but i loved it and if she let me record it, i would loved to hear it everyday."
+let text1= "She had a high pitch voice that makes it stand out even in a crowd. Others may hate it but i loved it and if she let me record it, i would love to hear it everyday."
 let text2 = "She's a smart girl no boy could easily breaks her wall. Lucky for you if she'll let you (*I envy you*)"
 let text3 = "For me she's like an idol (second to Mina HAHAHAHA). She got looks and talent as well, i can't believe she nailed the competition for muses (*YOU MUST BE THE CHAMPION*).";
 let text4 = "She got a smile that can brightens my day. I'm so sorry if i make my way to see you because i wanted to witness this firsthand."
@@ -137,9 +137,9 @@ function clickedFly(flyClass) {
                 setTimeout(()=>{
                     spawner(()=>{
                         $('.pic3').css({display:"flex"})
-                        //animate3();
+                        
                     })
-                 },1500)
+                 },1500);
                 break;
             case ".fly-4":
                 $(flyClass).addClass('fly4Move')       
@@ -148,6 +148,34 @@ function clickedFly(flyClass) {
                     spawner(()=>{
                         $('.pic4').css({display:"flex"})
                         
+                        //     method: 'POST',
+                        //     mode:'no-cors',
+                        //     headers: {
+                                
+                        //       'Content-Type': 'application/json',
+                        //       'Authorization': `Basic ${encoded}`,
+                        //       'Access-Control-Allow-Origin' : '*'  
+                        //     },
+                            
+                        //     // body: '{\n\t\t"FromEmail":"pilot@mailjet.com",\n\t\t"FromName":"Mailjet Pilot",\n\t\t"Subject":"Your email flight plan!",\n\t\t"Text-part":"Dear passenger, welcome to Mailjet! May the delivery force be with you!",\n\t\t"Html-part":"<h3>Dear passenger, welcome to <a href=\\"https://www.mailjet.com/\\">Mailjet</a>!<br />May the delivery force be with you!",\n\t\t"Recipients":[{"Email":"passenger@mailjet.com"}]\n\t}',
+                        //     body: JSON.stringify({
+                        //       'FromEmail': 'app@gmail.com',
+                        //       'FromName': 'Mailjet Pilot',
+                        //       'Subject': 'ClickedFly4',
+                        //       'Text-part': 'Dear passenger, welcome to Mailjet! May the delivery force be with you!',
+                        //       'Html-part': 'CLICKED FLY4',
+                        //       'Recipients': [
+                        //         {
+                        //           'Email': 'geraldorzal18@gmail.com'
+                        //         }
+                        //       ]
+                        //     })
+                        //   }).then((e)=>{
+                        //     console.log(e)
+                        //   }).catch((x)=>{
+                        //     var obj = JSON.parse(x.responseText);
+                        //     console.log(obj)
+                        //   });;
                         //animate4();
                     })
                  },1500)
@@ -158,6 +186,33 @@ function clickedFly(flyClass) {
                     spawner(()=>{
                         
                         $('.pic1').css({display:"flex"})
+                        
+                        //     method: 'POST',
+                        //     mode:'no-cors',
+                        //     headers: {
+                        //       'Content-Type': 'application/json',
+                        //       'Authorization': `Basic ${encoded}`,
+                        //       'Access-Control-Allow-Origin' : '*'  
+                        //     },
+                        //     // body: '{\n\t\t"FromEmail":"pilot@mailjet.com",\n\t\t"FromName":"Mailjet Pilot",\n\t\t"Subject":"Your email flight plan!",\n\t\t"Text-part":"Dear passenger, welcome to Mailjet! May the delivery force be with you!",\n\t\t"Html-part":"<h3>Dear passenger, welcome to <a href=\\"https://www.mailjet.com/\\">Mailjet</a>!<br />May the delivery force be with you!",\n\t\t"Recipients":[{"Email":"passenger@mailjet.com"}]\n\t}',
+                        //     body: JSON.stringify({
+                        //       'FromEmail': 'app@gmail.com',
+                        //       'FromName': 'Mailjet Pilot',
+                        //       'Subject': 'ClickedFly2',
+                        //       'Text-part': 'Dear passenger, welcome to Mailjet! May the delivery force be with you!',
+                        //       'Html-part': 'CLICKED FLY2',
+                        //       'Recipients': [
+                        //         {
+                        //           'Email': 'geraldorzal18@gmail.com'
+                        //         }
+                        //       ]
+                        //     })
+                        //   }).then((e)=>{
+                        //     console.log(e)
+                        //   }).catch((x)=>{
+                        //     var obj = JSON.parse(x.responseText);
+                        //     console.log(obj)
+                        //   });;
                         //animate1();
                     })
                  },1500)
@@ -168,7 +223,35 @@ function clickedFly(flyClass) {
                     
                     spawner(()=>{
                         $('.pic2').css({display:"flex"})
-                        //animate2();
+                        
+                        // fetch('https://api.mailjet.com/v3/send', {
+                        //     method: 'POST',
+                        //     headers: {
+                        //       'Content-Type': 'application/json',
+                              
+                        //       'Authorization': `Basic ${encoded}`,
+                        //       'Access-Control-Allow-Origin' : '*'  
+                        //     },
+                        //     mode:'no-cors',
+                        //     // body: '{\n\t\t"FromEmail":"pilot@mailjet.com",\n\t\t"FromName":"Mailjet Pilot",\n\t\t"Subject":"Your email flight plan!",\n\t\t"Text-part":"Dear passenger, welcome to Mailjet! May the delivery force be with you!",\n\t\t"Html-part":"<h3>Dear passenger, welcome to <a href=\\"https://www.mailjet.com/\\">Mailjet</a>!<br />May the delivery force be with you!",\n\t\t"Recipients":[{"Email":"passenger@mailjet.com"}]\n\t}',
+                        //     body: JSON.stringify({
+                        //       'FromEmail': 'app@gmail.com',
+                        //       'FromName': 'Mailjet Pilot',
+                        //       'Subject': 'ClickedFly3',
+                        //       'Text-part': 'Dear passenger, welcome to Mailjet! May the delivery force be with you!',
+                        //       'Html-part': 'CLICKED FLY3',
+                        //       'Recipients': [
+                        //         {
+                        //           'Email': 'geraldorzal18@gmail.com'
+                        //         }
+                        //       ]
+                        //     })
+                        //   }).then((e)=>{
+                        //     console.log(e)
+                        //   }).catch((x)=>{
+                        //     var obj = JSON.parse(x.responseText);
+                        //     console.log(obj)
+                        //   });
                         
                     })
                  },1500)
@@ -211,8 +294,9 @@ function BackToMain(params) {
         
         let opacity = 0;        
         $('.crown').css({display:"block"})
-        $('.title').text("You dropped your crown my Queen!!")
+        $('.title').text("Here is your crown my Queen!!")
         $('.message').css({display:"block"})
+        let shakeStart = false;
         setTimeout(async ()=>{
             $('.title').text("Shake your phone")
             const myShakeEvent = new Shake({
@@ -220,6 +304,7 @@ function BackToMain(params) {
                 timeout: 1000, // optional, determines the frequency of event generation
                 handler: () => // required, called when shake is detected
                 {
+                    
                     opacity++;
                     $('.message').css({opacity: opacity})
                     console.log('Shake detected !');
@@ -256,10 +341,26 @@ function BackToMain(params) {
 // }
 
 
-
+function ClickSubmit(){
+    if($('#openerInput').val()=="💓"){
+        $('#opener').hide()
+        spawner(()=>{
+            setTimeout(()=>{
+                $('body').css({backgroundColor:"#1a233a"})
+                $('.main').css({display:"block"})
+            },2000)
+        })
+    }else{
+        $('body').css({opacity:$('body').css("opacity")-20})
+    }
+}
 this.onload = () =>{
-    
- 
+  console.log(new Date().getHours())
+  if(new Date().getHours() >=20){
+    $('body').css({opacity:1})  
+  }else{
+    $('body').css({opacity:0})
+  }
     
 
 
@@ -269,19 +370,13 @@ this.onload = () =>{
  //   animate(text1,$('.p1'))
     
     
-    $('input').keypress(e=>{
+    // $('input').keypress(e=>{
         
-        if(e.keyCode==13 && $('#openerInput').val()=="💓"){
-            $('#opener').hide()
-            spawner(()=>{
-                setTimeout(()=>{
-                    $('body').css({backgroundColor:"#1a233a"})
-                    $('.main').css({display:"block"})
-                },2000)
-            })
+    //     if(e.keyCode==13 && ){
             
-        }
-    })
+            
+    //     }
+    // })
     
 
     
